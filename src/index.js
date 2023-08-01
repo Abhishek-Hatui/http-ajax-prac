@@ -29,3 +29,7 @@ axios.interceptors.response.use(response => {
   console.log(error);
   return Promise.reject(error);
 });
+
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
+axios.defaults.headers.common['Authorization'] = 'Auth Token';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
